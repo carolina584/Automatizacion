@@ -1,0 +1,35 @@
+repositories {
+    jcenter()
+    mavenLocal()
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+    dependencies {
+        
+    }
+}
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+dependencies {
+
+	testCompile('junit:junit:4.12')
+	testCompile('net.serenity-bdd:serenity-core:1.1.1')
+	testCompile('net.serenity-bdd:serenity-junit:1.1.1')
+	
+    compile 'net.serenity-bdd:serenity-core:1.9.9'
+    compile 'net.serenity-bdd:serenity-junit:1.9.9'
+    compile 'net.serenity-bdd:serenity-screenplay:1.9.9'
+    compile 'net.serenity-bdd:serenity-screenplay-webdriver:1.9.9'
+    compile 'net.serenity-bdd:serenity-cucumber:1.9.8'
+    compile 'org.slf4j:slf4j-simple:1.7.9' 
+   
+}
+gradle.startParameter.continueOnFailure = true
+
+
